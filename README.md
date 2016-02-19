@@ -1,9 +1,16 @@
-1602-OLED-Arduino-Library
+US2066 OLED driver library for Arduino
 =========================
+The US2066 driver is user in some EastRising displays like the ER-OLEDM1602 - 4
 
-wide.HK 1602 OLED Library
+My atempt at writing a library for the US2066 based on the 1602-OLED-Arduino-Library(for the Wide.HK OLED 1602 display) Writen by Nathan Chantrell http://nathan.chantrell.net 
 
-This Library is intended for the Wide.HK OLED 1602 display.
+
+
+
+
+
+
+
 
 KEYWORDS
 
@@ -21,8 +28,5 @@ clearLcd	    KEYWORD2
 
 cursPos		    KEYWORD2
 
-scrollString	KEYWORD2 Writen by Nathan Chantrell http://nathan.chantrell.net
+scrollString	KEYWORD2 
 
-Updated sendString to include cursPos data. sendString("String", col, row)
-Updated Library by adding sendFloat function, this allows a float value to be
-sent to the LCD, the float is converted to a string and sent using the sendString function
