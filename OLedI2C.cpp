@@ -13,11 +13,12 @@ sendString("string", col, row)
 */
 #include "OLedI2C.h" 
 #include "Wire.h"
-#define OLED_Address 0x3c
+#define DEFAULTAddress 0x3C
 #define OLED_Command_Mode 0x80
 #define OLED_Data_Mode 0x40
 
-OLedI2C::OLedI2C(){}
+OLedI2C::OLedI2C(){addr=DEFAULTAddress;}
+OLedI2C::OLedI2C(uint8_t address){addr=address;}
 OLedI2C::~OLedI2C(){}
 
 
@@ -99,7 +100,7 @@ sendCommand(0x0C);  	// **** Turn on On
 
  void OLedI2C::sendCommand(unsigned char command)
 {
-    Wire.beginTransmission(OLED_Address); 	 // **** Start I2C 
+    Wire.beginTransmission(addr); 	 // **** Start I2C 
     Wire.write(OLED_Command_Mode);     		 // **** Set OLED Command mode
     Wire.write(command);
     Wire.endTransmission();                 	 // **** End I2C 
@@ -138,7 +139,7 @@ void OLedI2C::sendString(const char *String, uint8_t col, uint8_t row)
 }
 void OLedI2C::sendData(unsigned char data)
 {
-  Wire.beginTransmission(OLED_Address);  	// **** Start I2C 
+  Wire.beginTransmission(addr);  	// **** Start I2C 
   Wire.write(OLED_Data_Mode);     		// **** Set OLED Data mode
   Wire.write(data);
   Wire.endTransmission();                     // **** End I2C 

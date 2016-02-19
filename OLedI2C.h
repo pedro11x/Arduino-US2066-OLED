@@ -15,7 +15,9 @@
 
 class OLedI2C {
 public:
+    uint8_t addr;
 		OLedI2C();
+    OLedI2C(uint8_t addr);
 		~OLedI2C();
 		void init();
 		void sendCommand(unsigned char command);
