@@ -7,27 +7,34 @@ My atempt at writing a library for the US2066 based on the 1602-OLED-Arduino-Lib
 
 
 Default constructor (for default address Ox3C)  
+
     US2066();
     
 Constructor for custom I2C address  
+
     US2066(uint8_t addr);
     
 Destructor  
-		~US2066();
+
+    ~US2066();
     
 Initialize the display  
-		void init();
+
+    void init();
 
 Print character from current cursor position  
+
     void print(char c);
     
 Print from current cursor position  
+
     void print(const char *String);
 
 Print from defined cursor position  
   col - Starting column  
   row - Starting row  
-		void print(uint8_t row, uint8_t col, const char *String);
+
+    void print(uint8_t row, uint8_t col, const char *String);
    
 Display progress bar on screen  
   col - column in which the bar starts  
@@ -35,20 +42,25 @@ Display progress bar on screen
   size - size of the bar when full (in number of on screen characters)  
   value - status of the bar in percentage (0 - 100)  
   This only works if the CGROM A is selected  
-  (which is selected, by default, by the init function)  
-		void bar(uint8_t row, uint8_t col, int size, int value);  
+  (which is selected, by default, by the init function) 
+  
+    void bar(uint8_t row, uint8_t col, int size, int value);  
    
 Clears the display  
-		void clear();
+
+    void clear();
    
 Sends cursor home (row = 0, column = 0)  
+
     void home();
     
 Turn on blinking cursor  
   state =    
   high - on  
   low  - off  
+  
     void blinkingCursor(uint8_t state);
     
 Set cursor position  
-		void cursor(uint8_t row, uint8_t col);
+
+    void cursor(uint8_t row, uint8_t col);
