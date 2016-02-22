@@ -56,8 +56,8 @@ Sends cursor home (row = 0, column = 0)
     
 Turn on blinking cursor  
   state =    
-  high - on  
-  low  - off  
+  true   - on  
+  false  - off  
   
     void blinkingCursor(uint8_t state);
     
