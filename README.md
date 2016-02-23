@@ -26,7 +26,7 @@ By running init, the OLED will be initialized with the **CGROM A** which is requ
 5. print!  
 
 
-```c
+```c++
 #include"US2066.h"
 US2066 OLED();
 void setup()  
@@ -40,33 +40,33 @@ void setup()
 Library Functions
 ------
 ##### Default constructor (for default address Ox3C)  
-```c
+```c++
 US2066();
 ```
 ##### Constructor for custom I2C address  
-```c
+```c++
 US2066(uint8_t addr);
 ```
 ##### Destructor  
-```c
+```c++
 ~US2066();
 ```
 ##### Initialize the display  
-```c
+```c++
 void init();
 ```
 ##### Print character from current cursor position  
-```c
+```c++
 void print(char c);
 ```
 ##### Print from current cursor position  
-```c
+```c++
 void print(const char *String);
 ```
 ##### Print from defined cursor position  
 col - Starting column  
 row - Starting row  
-```c
+```c++
 void print(uint8_t row, uint8_t col, const char *String);
 ```
 ##### Display progress bar on screen  
@@ -76,24 +76,24 @@ size - size of the bar when full (in number of on screen characters)
 value - status of the bar in percentage (0 - 100)  
 This only works if the CGROM A is selected  
   (which is selected, by default, by the init function)
-```c
+```c++
 void bar(uint8_t row, uint8_t col, int size, int value);  
 ```
 ##### Clears the display  
-```c
+```c++
 void clear();
 ```
 ##### Sends cursor home (row = 0, column = 0)  
-```c
+```c++
 void home();
 ```
 ##### Turn on blinking cursor  
 true   - on  
 false  - off  
-```c
+```c++
 void blinkingCursor(uint8_t state);
 ```
 ##### Set cursor position  
-```c
+```c++
 void cursor(uint8_t row, uint8_t col);
 ```
