@@ -1,6 +1,6 @@
 US2066 OLED driver library for Arduino
 =========================
-The US2066 driver is user in some EastRising displays like the ER-OLEDM1602 - 4
+The US2066 driver is used in some EastRising displays like the ER-OLEDM1602 - 4
 
 This is my atempt at writing a library for the US2066 based on the [1602-OLED-Arduino-Library(for the Wide.HK OLED 1602 display)](https://github.com/gadjet/1602-OLED-Arduino-Library) Written by Phil Grant (gadjet).
 
@@ -94,3 +94,5 @@ By running init, the OLED will be initialized with the **CGROM A** which is requ
 ##### Set cursor position  
 
     void cursor(uint8_t row, uint8_t col);
+  
+by [pedro11x on Github](https://github.com/pedro11x/Arduino-US2066-OLED)

@@ -9,7 +9,6 @@ float digit; //Variable to hold sample temperature value
 
 void setup()
 {
-  Serial.begin(9600);
   Wire.begin();
   OLED.init();
 }
@@ -18,7 +17,6 @@ void loop()
 { char* buf;
   //Printing, no cursor
   OLED.print("hello");
-
   //Progress bar!
   for(int i=0;i<=100;i+=5){
     OLED.bar(0, 6, 5, i);
@@ -82,7 +80,10 @@ void loop()
   //Waking it up
   OLED.on();
   
-  while(1);
+  delay(10000);
+  OLED.clear();
+  OLED.home();
+  OLED.blinkingCursor(false);
 }
 
 void animatedPrint(String buf){
